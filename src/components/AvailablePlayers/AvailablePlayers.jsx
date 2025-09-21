@@ -7,7 +7,7 @@ const AvailablePlayers = ({ playerPromise }) => {
     console.log(playersData);
 
     return (
-        <div className='max-w-7xl mx-auto px-10 grid grid-cols-1  md:grid-cols-3 gap-y-6 gap-x-3'>
+        <div className='max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-3'>
 
             {
                 playersData.map(player =>
@@ -31,7 +31,7 @@ const AvailablePlayers = ({ playerPromise }) => {
                             </div>
                             <div className="flex justify-between items-center mt-2 font-bold">
                                 <span>Rating</span>
-                                <span>{player.rating}</span>
+                                <span>⭐ {player.rating}</span>
                             </div>
                             <div className="flex justify-between items-center mt-1">
                                 <span className='font-bold'>{player.batting_style}</span>
