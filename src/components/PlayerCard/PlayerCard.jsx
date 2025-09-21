@@ -42,7 +42,7 @@ const PlayerCard = ({ player, availableBalance, setAvailableBalance, buyPlayers,
                 </div>
                 <div className="card-actions mt-3 flex justify-between items-center">
                     <p className='font-bold'>Price: {player.price}</p>
-                    <button disabled={isSelected} onClick={() => {handleSelected(player)}} className="btn" >{isSelected === true ? "Selected" : 'Choose Player'}</button>
+                    <button disabled={isSelected} onClick={() => {handleSelected(player)}} className="btn btn-outline btn-primary" >{isSelected === true ? "Selected" : 'Choose Player'}</button>
                 </div>
             </div>
         </div>
