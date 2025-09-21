@@ -18,6 +18,11 @@ const App = () => {
   const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(1000000);
   const [buyPlayers, setBuyPlayers] = useState([]);
+
+  const removePlayer = (p) => {
+    const filterPayers = buyPlayers.filter(ply => ply.id !== p.id)
+    setBuyPlayers(filterPayers);
+  }
   // console.log(buyPlayers);
   
   // const handleToggle = () => {
@@ -42,7 +47,7 @@ const App = () => {
         </div>
         }>
           <AvailablePlayers buyPlayers={buyPlayers} setBuyPlayers={setBuyPlayers}  availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
-        </Suspense> : <SelectedPlayers buyPlayers={buyPlayers}  />
+        </Suspense> : <SelectedPlayers removePlayer={removePlayer} buyPlayers={buyPlayers}  />
       }
       <NewsLatter />
       <Footer />
