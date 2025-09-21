@@ -3,6 +3,8 @@ import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
+import Footer from './components/Footer/Footer'
+import NewsLatter from './components/NewsLatter/NewsLatter'
 
 
 const playes = async () => {
@@ -19,7 +21,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Home />
+      <Home setToggle={setToggle} toggle={toggle} />
       {/* Availavle / Selected */}
       <div className="max-w-7xl mx-auto px-10 flex justify-between items-center">
         <h1 className='font-bold text-2xl'>Available Players</h1>
@@ -36,7 +38,8 @@ const App = () => {
           <AvailablePlayers playerPromise={playerPromise} />
         </Suspense> : <SelectedPlayers />
       }
-
+      <NewsLatter />
+      <Footer />
     </>
   )
 }
