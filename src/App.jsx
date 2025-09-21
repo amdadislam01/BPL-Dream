@@ -12,15 +12,21 @@ const playes = async () => {
   return res.json()
 }
 
+const playerPromise = playes()
+
 const App = () => {
   const [toggle, setToggle] = useState(true);
+  const [availableBalance, setAvailableBalance] = useState(1000000);
+  const [buyPlayers, setBuyPlayers] = useState([]);
+  // console.log(buyPlayers);
+  
   // const handleToggle = () => {
   //   setToggle(!toggle)
   // }
-  const playerPromise = playes()
+  
   return (
     <>
-      <Navbar />
+      <Navbar availableBalance={availableBalance} />
       <Home setToggle={setToggle} toggle={toggle} />
       {/* Availavle / Selected */}
       <div className="max-w-7xl mx-auto px-10 flex justify-between items-center">
@@ -35,8 +41,8 @@ const App = () => {
           <span className="loading loading-spinner text-neutral"></span>
         </div>
         }>
-          <AvailablePlayers playerPromise={playerPromise} />
-        </Suspense> : <SelectedPlayers />
+          <AvailablePlayers buyPlayers={buyPlayers} setBuyPlayers={setBuyPlayers}  availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
+        </Suspense> : <SelectedPlayers buyPlayers={buyPlayers}  />
       }
       <NewsLatter />
       <Footer />
