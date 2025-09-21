@@ -2,6 +2,7 @@ import React, { Suspense, useState } from 'react'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 import Navbar from './components/Navbar/Navbar'
+import Home from './components/Home/Home'
 
 
 const playes = async () => {
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <Home />
       {/* Availavle / Selected */}
       <div className="max-w-7xl mx-auto px-10 flex justify-between items-center">
         <h1 className='font-bold text-2xl'>Available Players</h1>
