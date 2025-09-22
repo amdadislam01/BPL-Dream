@@ -1,7 +1,7 @@
 import React from 'react'
 import banner from '../../assets/bg-shadow.png';
 import bannerMain from '../../assets/banner-main.png';
-const Home = ({toggle, setToggle}) => {
+const Home = ({toggle}) => {
     return (
         <div className="max-w-7xl mx-auto px-10 py-6">
             <div

@@ -3,3 +3,7 @@
   themes: light --default, dark --prefersdark;
   /* aro other DaisyUI config deya jabe ekhane */
 }
+
+*{
+  scrollbar-width: none;
+}
