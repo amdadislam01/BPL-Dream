@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import NewsLatter from './components/NewsLatter/NewsLatter'
+import Loader from './components/Loader/Loader';
 
 
 
@@ -46,10 +47,7 @@ const App = () => {
         </div>
       </div>
       {
-        toggle === true ? <Suspense fallback={<div className="flex justify-center items-center h-screen text-2xl">
-          <span className="loading loading-spinner text-neutral"></span>
-        </div>
-        }>
+        toggle === true ? <Suspense fallback={<Loader />}>
           <AvailablePlayers buyPlayers={buyPlayers} setBuyPlayers={setBuyPlayers} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
         </Suspense> : <SelectedPlayers setToggle={setToggle} removePlayer={removePlayer} buyPlayers={buyPlayers} />
       }
