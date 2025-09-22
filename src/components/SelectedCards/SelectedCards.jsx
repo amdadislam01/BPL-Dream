@@ -1,12 +1,12 @@
 import React from 'react'
 
-const SelectedCards = ({player, removePlayer}) => {
+const SelectedCards = ({ player, removePlayer }) => {
     // console.log(player);
 
     const handleRemove = () => {
         removePlayer(player)
     }
-    
+
     return (
         <div className="border-2 border-gray-200 p-3 flex justify-between items-center rounded-2xl mb-4">
             {/* left */}

@@ -51,7 +51,7 @@ const App = () => {
         </div>
         }>
           <AvailablePlayers buyPlayers={buyPlayers} setBuyPlayers={setBuyPlayers} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
-        </Suspense> : <SelectedPlayers removePlayer={removePlayer} buyPlayers={buyPlayers} />
+        </Suspense> : <SelectedPlayers setToggle={setToggle} removePlayer={removePlayer} buyPlayers={buyPlayers} />
       }
       <NewsLatter />
       <Footer />
