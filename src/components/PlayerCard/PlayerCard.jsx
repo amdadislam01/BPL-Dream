@@ -18,6 +18,7 @@ const PlayerCard = ({ player, availableBalance, setAvailableBalance, buyPlayers,
         setIsSelected(true)
         setAvailableBalance(availableBalance - playerPrice)
         setBuyPlayers([...buyPlayers, playerData])
+        toString('Player Purshed')
     }
     return (
         <div className="card bg-base-100  shadow-sm p-3">
