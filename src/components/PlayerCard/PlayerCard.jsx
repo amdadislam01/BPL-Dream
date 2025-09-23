@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 
 const PlayerCard = ({ player, availableBalance, setAvailableBalance, buyPlayers, setBuyPlayers }) => {
 
-    // Check player already selected by unique ID
     const alreadySelected = buyPlayers.some(p => p.player_id === player.player_id);
 
     const handleSelected = (playerData) => {
