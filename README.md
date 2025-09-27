@@ -7,7 +7,7 @@ This project is designed to showcase a responsive and interactive user experienc
 
 ## 🚀 Live Demo
 
-👉 [Add your live demo link here once deployed]
+
 
 ---
 
